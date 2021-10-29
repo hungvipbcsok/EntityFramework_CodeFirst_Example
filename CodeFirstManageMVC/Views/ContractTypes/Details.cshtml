@@ -1,0 +1,42 @@
+﻿@model EntityFramework_CodeFirst_Example.Model.ContractType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContractType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

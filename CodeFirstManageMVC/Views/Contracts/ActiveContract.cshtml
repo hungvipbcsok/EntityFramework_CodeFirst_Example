@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EntityFramework_CodeFirst_Example.Model.Contract>
+
+@{
+    ViewBag.Title = "ActiveContract";
+}
+
+<h2>ActiveContract</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractType.ContractTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttendName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestColumn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractType.ContractTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttendName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestColumn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContractId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContractId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContractId })
+        </td>
+    </tr>
+}
+
+</table>

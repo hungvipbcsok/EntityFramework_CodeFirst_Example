@@ -1,0 +1,82 @@
+﻿@model EntityFramework_CodeFirst_Example.Model.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyTaxCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyTaxCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepresentiveName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepresentiveName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepresentiveEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepresentiveEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepresentivePhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepresentivePhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
